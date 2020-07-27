@@ -55,12 +55,12 @@ class TruckReception(tk.Frame):
             location_time=time.localtime(currentSeconed)
             date_time = (f"{location_time.tm_year}-{location_time.tm_mon}-{location_time.tm_mday} {location_time.tm_hour}:{location_time.tm_min}:{location_time.tm_sec}")
             if value ==self.tn_txt:
-                Readings.set_tn({'value':value.get(),'source':'manual','Accurace':'100','time_stamp':date_time})
+                Readings.set_tn({'value':value.get(),'source':'manual','Accuracy':'100','time_stamp':date_time})
             elif value == self.trn_txt:
-                Readings.set_trn({'value':value.get(),'source':'manual','Accurace':'100','time_stamp':date_time})
+                Readings.set_trn({'value':value.get(),'source':'manual','Accuracy':'100','time_stamp':date_time})
             elif value == self.nn_txt:
                 print('inside nn in focus')
-                Readings.set_nn({'value':value.get(),'source':'manual','Accurace':'100','time_stamp':date_time})
+                Readings.set_nn({'value':value.get(),'source':'manual','Accuracy':'100','time_stamp':date_time})
 
     def handle_click(self,target):
         self.input_target = target
